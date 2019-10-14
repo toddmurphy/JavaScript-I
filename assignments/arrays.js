@@ -119,8 +119,20 @@ console.log(allCarModels(inventory))
 
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
-let carYears = inventory.filter(car => car.car_year < 2000)
-console.log(carYears)
+let carYears = []
+function allCarYears(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].car_year) {
+            //(arr[i].car_year) establishes a true condtion to meet
+            carYears.push(arr[i].car_year)
+            // console.log(arr[i]) //outputs the entire array of inventory
+            // console.log(arr[i].car_year) //outputs just the years in the inventory array
+        }
+    }
+    return carYears //get the output for carYears
+}
+
+console.log(allCarYears(inventory)) //invoke the function and pass in inventory to show years
 
 // ==== Challenge 5 ====
 // The car lot manager needs to find out how many cars are older than the year 2000. Using the carYears array you just created, find out how many cars were made before the year 2000 by populating the array oldCars and logging it's length.
