@@ -94,21 +94,47 @@ console.log(antonietta.gender)
 
 // ==== Stretch Challenge: Nested Objects and the this keyword ====
 
-// 1. Create a parent object with properties for name and age.  Make the name Susan and the age 70.
-// 2. Nest a child object in the parent object with name and age as well.  The name will be George and the age will be 50.
-// 3. Nest a grandchild object in the child object with properties for name and age.  The name will be Sam and the age will be 30
-// 4. Give each of the objects the ability to speak their names using the this keyword.
+// 1. Create a parent object with properties for name and age.  Make the name Susan and the age 70. //COMPLETE
+// 2. Nest a child object in the parent object with name and age as well.  The name will be George and the age will be 50. //COMPLETE
+// 3. Nest a grandchild object in the child object with properties for name and age.  The name will be Sam and the age will be 30 //COMPLETE
+// 4. Give each of the objects the ability to speak their names using the this keyword. //COMPLETE
 
-const parent = {}
+const parent = {
+    name: 'Susan',
+    age: 70,
+    speak: function() {
+        return `Hi, i'm ${parent.name}`
+    },
+    child: {
+        name: 'George',
+        age: 50,
+        speak: function() {
+            return `Hi, i'm ${child.name}`
+        },
+        grandchild: {
+            name: 'Sam',
+            age: 30,
+            speak: function() {
+                return `Hi, i'm ${grandchild.name}`
+            }
+        }
+    }
+}
 
 // Log the parent object's name
+console.log(parent) //output entire parent object
 
 // Log the child's age
+console.log(parent.child.age) //50
 
 // Log the name and age of the grandchild
+console.log(parent.child.grandchild.age) //30
 
 // Have the parent speak
+console.log(parent.speak())
 
 // Have the child speak
+console.log(parent.child.speak())
 
 // Have the grandchild speak
+console.log(parent.child.grandchild.speak())
