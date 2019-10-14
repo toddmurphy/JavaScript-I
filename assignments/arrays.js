@@ -104,12 +104,22 @@ console.log(`${lastCar.car_make} ${lastCar.car_model}`) //Lincoln Town Car
 
 // ==== Challenge 3 ====
 // The marketing team wants the car models listed alphabetically on the website. Sort all the car model names into alphabetical order and log the results in the console
-let carModels = inventory.filter(car => car.car_model).sort()
-console.log(carModels)
+// let carModels = inventory.filter(car => car.car_model)
+
+let carModels = []
+function allCarModels(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].car_model) {
+            carModels.push(arr[i].car_model)
+        }
+    }
+    return carModels.sort()
+}
+console.log(allCarModels(inventory))
 
 // ==== Challenge 4 ====
 // The accounting team needs all the years from every car on the lot. Create a new array from the dealer data containing only the car years and log the result in the console.
-let carYears = inventory.filter(car => car.car_year)
+let carYears = inventory.filter(car => car.car_year < 2000)
 console.log(carYears)
 
 // ==== Challenge 5 ====
