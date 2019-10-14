@@ -131,7 +131,7 @@ console.log(parent.child.age) //50
 console.log(parent.child.grandchild.age) //30
 
 // Have the parent speak
-console.log(parent.speak())
+console.log(parent.speak()) // Hi, I'm Susan
 
 // Have the child speak
 console.log(parent.child.speak())
