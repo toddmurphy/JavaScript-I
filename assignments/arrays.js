@@ -124,7 +124,6 @@ function allCarYears(arr) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i].car_year) {
             //(arr[i].car_year) establishes a true condtion to meet
-            carYears.push(arr[i].car_year)
             // console.log(arr[i]) //outputs the entire array of inventory
             // console.log(arr[i].car_year) //outputs just the years in the inventory array
         }
@@ -141,5 +140,5 @@ console.log(oldCars.length)
 
 // ==== Challenge 6 ====
 // A buyer is interested in seeing only BMW and Audi cars within the inventory. Return an array that only contains BMW and Audi cars.  Once you have populated the BMWAndAudi array, use JSON.stringify() to show the results of the array in the console.
-let BMWAndAudi = []
-console.log()
+let BMWAndAudi = inventory.filter(car => car.car_make === 'BMW' || car.car_make === 'Audi')
+console.log(BMWAndAudi)
