@@ -123,9 +123,10 @@ let carYears = []
 function allCarYears(arr) {
     for (let i = 0; i < arr.length; i++) {
         if (arr[i].car_year) {
-            //(arr[i].car_year) establishes a true condtion to meet
+            arr[i].car_year //establishes a true condtion to meet
             // console.log(arr[i]) //outputs the entire array of inventory
             // console.log(arr[i].car_year) //outputs just the years in the inventory array
+            carYears.push(arr[i].car_year)
         }
     }
     return carYears //get the output for carYears
