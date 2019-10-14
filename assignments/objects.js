@@ -25,12 +25,17 @@ const mitzi = {
     gender: 'F'
 }
 
+// Give Kennan the ability to say "Hello, my name is Kennan!Console log the speak output"
 const kennan = {
     id: 1,
     name: 'Kennan',
     email: 'kdiben1@tinypic.com',
-    gender: 'M'
+    gender: 'M',
+    speak: function() {
+        return `Hello, my name is ${kennan.name}!`
+    }
 }
+console.log(kennan.speak())
 
 const keven = {
     id: 2,
@@ -46,12 +51,17 @@ const gannie = {
     gender: 'F'
 }
 
+// Multiply two numbers together and return the product. Console log the output.
 const antonietta = {
     id: 4,
     name: 'Antoinetta',
     email: 'adaine5@samsung.com',
-    gender: 'F'
+    gender: 'F',
+    multiplyNums: function(num1, num2) {
+        return num1 * num2
+    }
 }
+console.log(antonietta.multiplyNums(3, 4))
 
 // ==== Challenge 2: Reading Object Data ====
 // Once your objects are created, log out the following requests from HR into the console:
