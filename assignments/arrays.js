@@ -119,7 +119,6 @@ console.log(allCarModels(inventory))
 
 //FILTER ARRARY HELPER TO CONVERT FROM FOR LOOP TO FILTER - STRETCH GOAL
 const filteredModels = inventory.map(car => car.car_model).sort()
-
 console.log(filteredModels)
 
 // ==== Challenge 4 ====
