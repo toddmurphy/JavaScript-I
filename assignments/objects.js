@@ -50,6 +50,10 @@ const gannie = {
     email: 'gmartinson3@illinois.edu',
     gender: 'F'
 }
+//How to add a method on an object outside of the object
+gannie.speak = function() {
+    return 'Hello,'
+}
 
 // Multiply two numbers together and return the product. Console log the output.
 const antonietta = {
